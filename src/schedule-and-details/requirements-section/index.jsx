@@ -67,6 +67,7 @@ const RequirementsSection = ({
         description={intl.formatMessage(messages.requirementsDescription)}
       />
       {aboutPageEditable && (
+      <>
         <Form.Group className="form-group-custom">
           <Form.Label>
             {intl.formatMessage(messages.timepickerLabel)}
@@ -80,7 +81,7 @@ const RequirementsSection = ({
             {intl.formatMessage(messages.timepickerHelpText)}
           </Form.Control.Feedback>
         </Form.Group>
-//     /--------------------------
+
         <Form.Group className="form-group-custom">
           <Form.Label>Complexity</Form.Label>
           <Dropdown>
@@ -99,8 +100,8 @@ const RequirementsSection = ({
             </Dropdown.Menu>
           </Dropdown>
         </Form.Group>
-//      /--------------------------
-      )}
+      </>
+    )}
       {isPrerequisiteCoursesEnabled && renderPrerequisiteDropdown()}
       {isEntranceExamsEnabled && (
         <EntranceExam
