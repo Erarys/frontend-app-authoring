@@ -10,6 +10,7 @@ import messages from './messages';
 
 const RequirementsSection = ({
   effort,
+  complexity,
   errorFields,
   aboutPageEditable,
   preRequisiteCourses,
@@ -79,6 +80,26 @@ const RequirementsSection = ({
             {intl.formatMessage(messages.timepickerHelpText)}
           </Form.Control.Feedback>
         </Form.Group>
+//     /--------------------------
+        <Form.Group className="form-group-custom">
+          <Form.Label>Complexity</Form.Label>
+          <Dropdown>
+            <Dropdown.Toggle variant="outline-primary">
+              {complexity || 'Select complexity'}
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              {['easy', 'medium', 'hard'].map(level => (
+                <Dropdown.Item
+                  key={level}
+                  onClick={() => onChange(level, 'complexity')}
+                >
+                  {level}
+                </Dropdown.Item>
+              ))}
+            </Dropdown.Menu>
+          </Dropdown>
+        </Form.Group>
+//      /--------------------------
       )}
       {isPrerequisiteCoursesEnabled && renderPrerequisiteDropdown()}
       {isEntranceExamsEnabled && (
@@ -106,6 +127,7 @@ const preRequisitesCourse = {
 
 RequirementsSection.defaultProps = {
   effort: '',
+  complexity: '', // <--------- ТУТ
   errorFields: {},
   entranceExamEnabled: '',
   preRequisiteCourses: [],
@@ -114,6 +136,7 @@ RequirementsSection.defaultProps = {
 
 RequirementsSection.propTypes = {
   effort: PropTypes.string,
+  complexity: PropTypes.string, // <------------ ТУТ
   errorFields: PropTypes.objectOf(PropTypes.string),
   aboutPageEditable: PropTypes.bool.isRequired,
   preRequisiteCourses: PropTypes.arrayOf(PropTypes.string),

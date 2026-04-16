@@ -112,6 +112,7 @@ const ScheduleAndDetails = ({ intl, courseId }) => {
     run,
     title,
     effort,
+    complexity,
     endDate,
     license,
     language,
@@ -308,6 +309,7 @@ const ScheduleAndDetails = ({ intl, courseId }) => {
                   {showRequirementsSection && (
                     <RequirementsSection
                       effort={effort}
+                      complexity={complexity}
                       errorFields={errorFields}
                       aboutPageEditable={aboutPageEditable}
                       entranceExamEnabled={entranceExamEnabled}
