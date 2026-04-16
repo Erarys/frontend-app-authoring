@@ -184,6 +184,7 @@ export const courseDetailResponse = {
   blocks_url: 'http://localhost:18000/api/courses/v2/blocks/?course_id=course-v1%3AedX%2BDemoX%2BDemo_Course',
   course_id: 'course-v1:edX+DemoX+Demo_Course',
   effort: null,
+  complexity: null,
   end: null,
   enrollment_end: null,
   enrollment_start: null,
