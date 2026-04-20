@@ -13,6 +13,10 @@ const messages = defineMessages({
     id: 'course-authoring.schedule-section.requirements.timepicker.label',
     defaultMessage: 'Hours of effort per week',
   },
+  courseDifficultyLabel: {
+  id: 'course-authoring.schedule-section.requirements.courseDifficultyLabel.label',
+  defaultMessage: 'Course Difficulty',
+},
   timepickerHelpText: {
     id: 'course-authoring.schedule-section.requirements.timepicker.help-text',
     defaultMessage: 'Time spent on all course work',

@@ -83,7 +83,7 @@ const RequirementsSection = ({
         </Form.Group>
 
         <Form.Group className="form-group-custom">
-          <Form.Label>Complexity</Form.Label>
+          <Form.Label>{intl.formatMessage(messages.courseDifficultyLabel)}</Form.Label>
           <Dropdown>
             <Dropdown.Toggle variant="outline-primary">
               {complexity || 'Select complexity'}
